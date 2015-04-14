@@ -13,7 +13,7 @@ def test():
 
 def commit():
     message = raw_input("Enter a git commit message: ")
-    local("git add . && git commit -am '{}'".format(message))
+    local("git add -A && git commit -am '{}'".format(message))
 
 
 def push():
@@ -27,27 +27,28 @@ def prepare():
     commit()
     push()
 
-
+def rollback():
+    local("heroku rollback")
 # deploy
 
-def pull():
-    local("git pull origin master")
+# def pull():
+#     local("git pull origin master")
 
 
-def heroku():
-    local("git push heroku master")
+# def heroku():
+#     local("git push heroku master")
 
 
-def heroku_test():
-    local("heroku run nosetests -v")
+# def heroku_test():
+#     local("heroku run nosetests -v")
 
 
-def deploy():
-    pull()
-    test()
-    commit()
-    heroku()
-    heroku_test()
+# def deploy():
+#     pull()
+#     test()
+#     commit()
+#     heroku()
+#     heroku_test()
 
 
 # rollback
