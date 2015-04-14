@@ -1,10 +1,8 @@
 # specify language
-language:
-  - python
+language: python
 
 # specify python version(s)
 python:
-  - "3.4"
   - "2.7"
 
 # install dependencies
@@ -19,6 +17,3 @@ script:
 deploy:
   provider: heroku
   api_key: cfe07170-609d-4f54-8da5-b48aa0e1cd4e
-  app: django-flasktaskr
-  on:
-    repo: cyberjoac/django-flasktaskr
