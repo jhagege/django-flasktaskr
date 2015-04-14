@@ -12,3 +12,4 @@ deploy:
   app: django-flasktaskr
   on:
     repo: cyberjoac/django-flasktaskr
+    python: '2.7'
